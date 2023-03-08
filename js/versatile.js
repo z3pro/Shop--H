@@ -39,10 +39,12 @@ function renderCartInfo() {
 }
 //hàm render sản phẩm giỏ hàng
 function renderTableCart() {
-    const cart = JSON.parse(localStorage.getItem('cart'));
-    const productTable = $('#root .products-body');
-    const html = cart.map(e => {
-        return `<tr>
+    let cart = localStorage.getItem('cart');
+    if (cart) {
+        cart = JSON.parse(cart)
+        const productTable = $('#root .products-body');
+        const html = cart.map(e => {
+            return `<tr>
     <td>
         <div class="center">
 
@@ -89,63 +91,64 @@ function renderTableCart() {
         </div>
     </td>
 </tr>`
-    })
-    productTable.innerHTML = html.join('')
-    $$('.btn-left').forEach(e => {
-        e.onclick = () => {
-            const quantity = e.parentElement.querySelector('.input-quantity').value;
-            const price = e.parentElement.parentElement.parentElement.parentElement.querySelector('.price-product').innerText;
-            e.parentElement.querySelector('.input-quantity').value = quantity - 1;
-            const into = e.parentElement.parentElement.parentElement.parentElement.querySelector('.into-money');
-            const value = price.slice(1) * e.parentElement.querySelector('.input-quantity').value;
-            into.innerText = `đ${value}`;
-            //cập nhật total
-            const list = [];
-            listCheckbox.forEach(e => {
-                if (e.checked) {
-                    list.push(e);
-                }
-            })
-            let quantityMoney = 0;
-            list.forEach(e => {
-                const money = e.parentElement.parentElement.parentElement.querySelector('.into-money').innerText.slice(1) * 1;
-                quantityMoney += money
-            })
-            $('#root .buy-money span').innerText = `${quantityMoney} VNĐ`
-        }
-    })
-    $$('.btn-right').forEach(e => {
-        e.onclick = () => {
-            const quantity = e.parentElement.querySelector('.input-quantity').value * 1;
-            const price = e.parentElement.parentElement.parentElement.parentElement.querySelector('.price-product').innerText;
-            e.parentElement.querySelector('.input-quantity').value = quantity + 1;
-            const into = e.parentElement.parentElement.parentElement.parentElement.querySelector('.into-money');
-            const value = price.slice(1) * e.parentElement.querySelector('.input-quantity').value;
-            into.innerText = `đ${value}`;
-            const list = [];
-            //cập nhật total
-            listCheckbox.forEach(e => {
-                if (e.checked) {
-                    list.push(e);
-                }
-            })
-            let quantityMoney = 0;
-            list.forEach(e => {
-                const money = e.parentElement.parentElement.parentElement.querySelector('.into-money').innerText.slice(1) * 1;
-                quantityMoney += money
-            })
-            $('#root .buy-money span').innerText = `${quantityMoney} VNĐ`
-        }
-    })
+        })
+        productTable.innerHTML = html.join('')
+        $$('.btn-left').forEach(e => {
+            e.onclick = () => {
+                const quantity = e.parentElement.querySelector('.input-quantity').value;
+                const price = e.parentElement.parentElement.parentElement.parentElement.querySelector('.price-product').innerText;
+                e.parentElement.querySelector('.input-quantity').value = quantity - 1;
+                const into = e.parentElement.parentElement.parentElement.parentElement.querySelector('.into-money');
+                const value = price.slice(1) * e.parentElement.querySelector('.input-quantity').value;
+                into.innerText = `đ${value}`;
+                //cập nhật total
+                const list = [];
+                listCheckbox.forEach(e => {
+                    if (e.checked) {
+                        list.push(e);
+                    }
+                })
+                let quantityMoney = 0;
+                list.forEach(e => {
+                    const money = e.parentElement.parentElement.parentElement.querySelector('.into-money').innerText.slice(1) * 1;
+                    quantityMoney += money
+                })
+                $('#root .buy-money span').innerText = `${quantityMoney} VNĐ`
+            }
+        })
+        $$('.btn-right').forEach(e => {
+            e.onclick = () => {
+                const quantity = e.parentElement.querySelector('.input-quantity').value * 1;
+                const price = e.parentElement.parentElement.parentElement.parentElement.querySelector('.price-product').innerText;
+                e.parentElement.querySelector('.input-quantity').value = quantity + 1;
+                const into = e.parentElement.parentElement.parentElement.parentElement.querySelector('.into-money');
+                const value = price.slice(1) * e.parentElement.querySelector('.input-quantity').value;
+                into.innerText = `đ${value}`;
+                const list = [];
+                //cập nhật total
+                listCheckbox.forEach(e => {
+                    if (e.checked) {
+                        list.push(e);
+                    }
+                })
+                let quantityMoney = 0;
+                list.forEach(e => {
+                    const money = e.parentElement.parentElement.parentElement.querySelector('.into-money').innerText.slice(1) * 1;
+                    quantityMoney += money
+                })
+                $('#root .buy-money span').innerText = `${quantityMoney} VNĐ`
+            }
+        })
 
-    $$('.btn-delete').forEach((e, index) => {
-        e.onclick = () => {
-            const newCart = JSON.parse(localStorage.getItem('cart'));
-            newCart.splice(index, 1);
-            localStorage.setItem('cart', JSON.stringify(newCart));
-            renderTableCart();
-        }
-    })
+        $$('.btn-delete').forEach((e, index) => {
+            e.onclick = () => {
+                const newCart = JSON.parse(localStorage.getItem('cart'));
+                newCart.splice(index, 1);
+                localStorage.setItem('cart', JSON.stringify(newCart));
+                renderTableCart();
+            }
+        })
+    }
 
 }
 
