@@ -84,7 +84,7 @@ function checkInput() {
 
 function checkData(data) {
     let name = inputAccount.value.trim();
-    let password = md5(inputPass.value.trim();
+    let password = md5(inputPass.value.trim());
     data.forEach(element => {
         if (element.name == name) {
             if (element.password == password) {
