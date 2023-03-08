@@ -83,8 +83,8 @@ function checkInput() {
     vào có trùng khớp với dữ liệu đã lưu trên database hay không */
 
 function checkData(data) {
-    let name = inputAccount.value;
-    let password = md5(inputPass.value);
+    let name = inputAccount.value.trim();
+    let password = md5(inputPass.value.trim();
     data.forEach(element => {
         if (element.name == name) {
             if (element.password == password) {
