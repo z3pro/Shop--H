@@ -28,7 +28,7 @@ function renderCartInfo() {
                 </div>
                 <div class="address-user">
                     <h4 class="name-phone">
-                        ${infoUser.name} ${infoUser.sdtOrGmail}
+                        ${infoUser.fullName} ${infoUser.sdtOrGmail}
                     </h4>
                     <div class="address">
                         ${infoUser.address || 'Chưa có địa chỉ'}
