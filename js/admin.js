@@ -13,10 +13,11 @@ function start() {
 }
 //xử lý chút bảo mật
 window.onload = () => {
-    const admin = JSON.parse(sessionStorage.getItem('infoUser'));
+    let admin = sessionStorage.getItem('infoUser');
     if (!admin) {
         window.location = '../html/login.html';
     }
+    admin = JSON.parse(admin);
     if (admin.name && admin.password && admin.admin) {
         console.log('admin');
     } else {
