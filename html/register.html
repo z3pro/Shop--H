@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/register.css">
+</head>
+<body>
+    <div id="login">
+        <form action="" method="post" class="form-login" id="form-login">
+            <h2 class="name-login">Đăng ký</h2>
+            <div class="form-group">
+                <label for="fullName" class="form-label">Tên đầy đủ:</label>
+                <input type="text" name="fullName"class="fullName-form form-input " placeholder="VD:Nguyễn Tiến Đạt">
+                <span class="span-form span-password"></span>
+            </div>
+            <div class="form-group">
+                <label for="address" class="form-label">Địa chỉ:</label>
+                <input type="text" name="password"class="address-form form-input" placeholder="VD:Mỹ Đình,Nam Từ Liêm,Hà Nội">
+                <span class="span-form span-address"></span>
+            </div>
+            <div class="form-group">
+                <label for="phone" class="form-label">Số điện thoại:</label>
+                <input type="number" name="password"class="phone-form form-input" placeholder="VD:0345678272" >
+                <span class="span-form  span-phone"></span>
+            </div>
+            <div class="form-group">
+                <label for="account-register" class="form-label">Tài khoản:</label>
+                <input type="text" name="account" autocomplete="off" class="account-form form-input" placeholder="VD:z3prozz">
+                <span class="span-form span-account"></span>
+            </div>
+            <div class="form-group">
+                <label for="password-register" class="form-label"> Mật khẩu:</label>
+                <input type="password" name="password-register" autocomplete="off" class="password-form form-input" placeholder="Nhập mật khẩu">
+                <span class="span-form span-password"></span>
+            </div>
+            <div class="form-group">
+                <label for="password" class="form-label">Nhập lại mật khẩu:</label>
+                <input type="password" name="password" class="retype-pass form-input" placeholder="Nhập lại mật khẩu">
+                <span class="span-form span-retype"></span>
+            </div>
+            <button id="btn-form">Đăng Ký</button>
+            <p class="register">Bạn đã có <a href="../html/login.html">tài khoản</a> ?</p>
+        </form>
+    </div>
+    <script type="module" src="../js/register.js"></script>
+</body>
+</html>

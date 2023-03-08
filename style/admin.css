@@ -1,0 +1,953 @@
+/* respopnsive phần quản lý và bảng nhập thông tin */
+@media (max-width:566.8px) {
+
+    th,
+    td {
+        font-size: 8px;
+        text-align: center;
+    }
+
+    #menu .fa-light {
+        font-size: 14px;
+    }
+
+    #list-product .list {
+        position: relative;
+    }
+
+    #list-product .close-category {
+        font-size: 10px;
+        position: absolute;
+        padding: 2px 4px;
+        border-bottom: 1px solid #ccc;
+        border-left: 1px solid #ccc;
+        right: 0;
+        top: 0;
+        color: #000;
+    }
+
+    #content .manage-web {
+        padding: 8px;
+        margin: 55px 0 0;
+        width: 100%;
+        min-height: 100px;
+        background-image: var(--color-main-2);
+        border-radius: 5px;
+    }
+
+    #content .manage-web h2 {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    #content .btn-lock {
+        font-size: 8px;
+    }
+
+    #content .manage-web .list-manage {
+        width: 100%;
+        display: flex;
+        height: 25px;
+        align-items: center;
+    }
+
+    #content .manage-web .manage-user {
+        border-top-left-radius: 5px;
+        border-right: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+    }
+
+    #content .manage-web .manage-bill {
+        border-bottom: 1px solid #ccc;
+        border-top-right-radius: 5px;
+    }
+
+    #content .manage-web .btn-manage {
+        font-size: 10px;
+        background-color: #fff;
+        height: 25px;
+        line-height: 15px;
+        padding: 5px;
+    }
+
+    #content .manage-web .root-manage {
+        padding: 10px 5px;
+        width: 100%;
+        background-color: #fff;
+        min-height: 50px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    #content .manage-web .root-manage table {
+        width: 100%;
+    }
+
+    #content .revenue-shop {
+        font-size: 12px;
+        padding: 0 10px 10px;
+        font-weight: 550;
+    }
+
+    #content .revenue-shop span {
+        color: red;
+        font-weight: 500;
+        margin-left: 10px;
+    }
+
+    #content .table-bill .bill {
+        overflow-x: none;
+        overflow-y: auto;
+        max-height: 300px;
+        width: 100%;
+        font-size: 14px;
+    }
+
+    #content .bill .bill-mini {
+        overflow-x: none;
+        overflow-y: auto;
+        max-height: 50px;
+        font-size: 10px;
+    }
+
+    #content .bill .bill-mini th,
+    #content .bill .bill-mini td {
+        font-size: 6px;
+        padding: 2px;
+    }
+
+    /* thêm sản phẩm  */
+
+    #add-category {
+        font-size: 10px;
+        padding: 4px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-image: var(--color);
+        color: #fff;
+        font-weight: 550;
+    }
+
+    #add-product {
+        font-size: 10px;
+        padding: 4px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-image: var(--color);
+        color: #fff;
+        font-weight: 550;
+    }
+
+    #list-product .add-category {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    #list-product .table-input-category {
+        display: none;
+        text-align: right;
+        width: 100%;
+        padding: 10px;
+        background-image: linear-gradient(to right, #fa9e1b, #8d4fff);
+        min-height: 100px;
+        border-radius: 5px;
+        padding-left: 5%;
+    }
+
+    #list-product .table-input-category.active {
+        display: block;
+    }
+
+    #list-product .table-input-category .input-category {
+        text-align: left;
+        display: block;
+        margin: 8px 0;
+    }
+
+    #list-product .input-category .input-label {
+        display: block;
+        font-size: 12px;
+        color: #666;
+    }
+
+    #list-product .input-category .category-input {
+        font-size: 10px;
+        padding: 4px 60px 4px 5px;
+        margin-left: 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: 2px solid #ccc;
+    }
+
+    #create-category {
+        font-size: 12px;
+        padding: 5px 10px;
+        border-radius: 10px;
+        margin-top: 10px;
+        border: 1px solid #999;
+        color: #333;
+        background-image: linear-gradient(to right, #d4ffff, #fa9e1b);
+    }
+
+    /*  */
+
+    #list-content-product .add-product {
+        display: block;
+    }
+
+    #list-content-product .table-input-product {
+        display: none;
+        text-align: right;
+        width: 100%;
+        padding: 10px;
+        background-image: linear-gradient(to right, #fa9e1b, #8d4fff);
+        min-height: 100px;
+        border-radius: 5px;
+        padding-left: 5%;
+    }
+
+    #list-content-product .table-input-product.active {
+        display: block;
+    }
+
+    #list-content-product .table-input-product .input-product {
+        text-align: left;
+        display: block;
+        margin: 8px 0;
+    }
+
+    #list-content-product .input-product .input-label {
+        display: block;
+        font-size: 10px;
+        color: #666;
+    }
+
+    #list-content-product .input-product .product-input {
+        font-size: 10px;
+        padding: 4px 60px 4px 5px;
+        margin-left: 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: 2px solid #ccc;
+    }
+
+    #create-product {
+        font-size: 10px;
+        padding: 5px 10px;
+        border-radius: 10px;
+        margin-top: 10px;
+        border: 1px solid #999;
+        color: #333;
+        background-image: linear-gradient(to right, #d4ffff, #fa9e1b);
+    }
+
+}
+
+@media (min-width:567px) {
+
+    th,
+    td {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    #content .btn-lock {
+        font-size: 10px;
+    }
+
+    #menu .fa-light {
+        font-size: 14px;
+    }
+
+    #list-product .list {
+        position: relative;
+    }
+
+    #list-product .close-category {
+        font-size: 10px;
+        position: absolute;
+        padding: 2px 4px;
+        border-bottom: 1px solid #ccc;
+        border-left: 1px solid #ccc;
+        right: 0;
+        top: 0;
+        color: #000;
+    }
+
+    #content .manage-web {
+        padding: 8px;
+        margin: 55px 0 0;
+        width: 100%;
+        min-height: 100px;
+        background-image: var(--color-main-2);
+        border-radius: 5px;
+    }
+
+    #content .manage-web h2 {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    #content .btn-lock {
+        font-size: 8px;
+    }
+
+    #content .manage-web .list-manage {
+        width: 100%;
+        display: flex;
+        height: 25px;
+        align-items: center;
+    }
+
+    #content .manage-web .manage-user {
+        border-top-left-radius: 5px;
+        border-right: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+    }
+
+    #content .manage-web .manage-bill {
+        border-bottom: 1px solid #ccc;
+        border-top-right-radius: 5px;
+    }
+
+    #content .manage-web .btn-manage {
+        font-size: 10px;
+        background-color: #fff;
+        height: 25px;
+        line-height: 15px;
+        padding: 5px;
+    }
+
+    #content .manage-web .root-manage {
+        padding: 20px 10px;
+        width: 100%;
+        background-color: #fff;
+        min-height: 50px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    #content .manage-web .root-manage table {
+        width: 100%;
+    }
+
+    #content .revenue-shop {
+        font-size: 16px;
+        padding: 0 20px 20px;
+        font-weight: 550;
+    }
+
+    #content .revenue-shop span {
+        color: red;
+        font-weight: 500;
+        margin-left: 10px;
+    }
+
+    #content .table-bill .bill {
+        overflow-x: none;
+        overflow-y: auto;
+        max-height: 300px;
+        width: 100%;
+        font-size: 14px;
+    }
+
+    #content .bill .bill-mini {
+        overflow-x: none;
+        overflow-y: auto;
+        max-height: 50px;
+        font-size: 10px;
+    }
+
+    #content .bill .bill-mini th,
+    #content .bill .bill-mini td {
+        font-size: 8px;
+        padding: 2px;
+    }
+
+    /* thêm sản phẩm */
+
+    #add-category {
+        font-size: 12px;
+        padding: 6px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-image: var(--color);
+        color: #fff;
+        font-weight: 550;
+    }
+
+    #add-product {
+        font-size: 12px;
+        padding: 6px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-image: var(--color);
+        color: #fff;
+        font-weight: 550;
+    }
+
+    #list-product .add-category {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    #list-product .table-input-category {
+        display: none;
+        text-align: right;
+        width: 100%;
+        padding: 10px;
+        background-image: linear-gradient(to right, #fa9e1b, #8d4fff);
+        min-height: 100px;
+        border-radius: 5px;
+        padding-left: 5%;
+    }
+
+    #list-product .table-input-category.active {
+        display: block;
+    }
+
+    #list-product .table-input-category .input-category {
+        text-align: left;
+        display: block;
+        margin: 8px 0;
+    }
+
+    #list-product .input-category .input-label {
+        display: block;
+        font-size: 12px;
+        color: #666;
+    }
+
+    #list-product .input-category .category-input {
+        font-size: 10px;
+        padding: 4px 60px 4px 5px;
+        margin-left: 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: 2px solid #ccc;
+    }
+
+    #create-category {
+        font-size: 12px;
+        padding: 5px 10px;
+        border-radius: 10px;
+        margin-top: 10px;
+        border: 1px solid #999;
+        color: #333;
+        background-image: linear-gradient(to right, #d4ffff, #fa9e1b);
+    }
+
+    /*  */
+
+    #list-content-product .add-product {
+        display: block;
+    }
+
+    #list-content-product .table-input-product {
+        display: none;
+        text-align: right;
+        width: 100%;
+        padding: 20px;
+        background-image: linear-gradient(to right, #fa9e1b, #8d4fff);
+        min-height: 100px;
+        border-radius: 5px;
+        padding-left: 5%;
+    }
+
+    #list-content-product .table-input-product.active {
+        display: block;
+    }
+
+    #list-content-product .table-input-product .input-product {
+        text-align: left;
+        display: block;
+        margin: 8px 0;
+    }
+
+    #list-content-product .input-product .input-label {
+        font-size: 12px;
+        display: block;
+        font-size: 16px;
+        color: #666;
+    }
+
+    #list-content-product .input-product .product-input {
+        font-size: 12px;
+        padding: 4px 60px 4px 5px;
+        margin-left: 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: 2px solid #ccc;
+    }
+
+    #create-product {
+        padding: 5px 20px;
+        border-radius: 10px;
+        margin-top: 10px;
+        border: 1px solid #999;
+        color: #333;
+        background-image: linear-gradient(to right, #d4ffff, #fa9e1b);
+    }
+
+}
+
+@media (min-width:768px) {
+
+    th,
+    td {
+        font-size: 12px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    #content .btn-lock {
+        font-size: 12px;
+    }
+
+    #content .address-td {
+        width: 250px;
+    }
+
+    #content .manage-web {
+        padding: 8px;
+        margin: 55px 0 0;
+        width: 100%;
+        min-height: 200px;
+        background-image: var(--color-main-2);
+        border-radius: 5px;
+    }
+
+    #content .manage-web h2 {
+        font-size: 28px;
+        padding: 30px;
+    }
+
+    #content .manage-web .list-manage {
+        width: 100%;
+        display: flex;
+        height: 50px;
+        align-items: center;
+    }
+
+    #content .manage-web .manage-user {
+        border-top-left-radius: 5px;
+        border-right: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+    }
+
+    #content .manage-web .manage-bill {
+        border-bottom: 1px solid #ccc;
+        border-top-right-radius: 5px;
+    }
+
+    #content .manage-web .btn-manage {
+        font-size: 16px;
+        background-color: #fff;
+        height: 50px;
+        line-height: 34px;
+        padding: 8px;
+    }
+
+    #content .manage-web .root-manage {
+        padding: 20px 8px 20px;
+        width: 100%;
+        background-color: #fff;
+        min-height: 100px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    #content .manage-web .root-manage table {
+        width: 100%;
+    }
+
+    #content .revenue-shop {
+        padding: 0 20px 20px;
+        font-weight: 550;
+    }
+
+    #content .revenue-shop span {
+        color: red;
+        font-weight: 500;
+        margin-left: 10px;
+    }
+
+    #content .table-bill .bill {
+        overflow-x: none;
+        overflow-y: auto;
+        max-height: 300px;
+        width: 100%;
+        font-size: 14px;
+    }
+
+    #content .bill .bill-mini {
+        overflow-x: none;
+        overflow-y: auto;
+        max-height: 50px;
+        font-size: 10px;
+    }
+
+    #content .bill .bill-mini th,
+    #content .bill .bill-mini td {
+        font-size: 10px;
+        padding: 5px;
+    }
+
+    /* thêm sản phẩm */
+
+    #add-category {
+        font-size: 14px;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        background-image: var(--color);
+        color: #fff;
+        font-weight: 550;
+    }
+
+    #add-product {
+        font-size: 14px;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        background-image: var(--color);
+        color: #fff;
+        font-weight: 550;
+    }
+
+    #list-product .add-category {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    #list-product .table-input-category {
+        display: none;
+        text-align: right;
+        width: 100%;
+        padding: 10px;
+        background-image: linear-gradient(to right, #fa9e1b, #8d4fff);
+        min-height: 100px;
+        border-radius: 5px;
+        padding-left: 5%;
+    }
+
+    #list-product .table-input-category.active {
+        display: block;
+    }
+
+    #list-product .table-input-category .input-category {
+        text-align: left;
+        display: block;
+        margin: 8px 0;
+    }
+
+    #list-product .input-category .input-label {
+        display: block;
+        font-size: 14px;
+        color: #666;
+    }
+
+    #list-product .input-category .category-input {
+        font-size: 14px;
+        padding: 4px 60px 4px 5px;
+        margin-left: 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: 2px solid #ccc;
+    }
+
+    #create-category {
+        font-size: 14px;
+        padding: 5px 10px;
+        border-radius: 10px;
+        margin-top: 10px;
+        border: 1px solid #999;
+        color: #333;
+        background-image: linear-gradient(to right, #d4ffff, #fa9e1b);
+    }
+}
+
+@media(min-width:992px) {
+
+    th,
+    td {
+        font-size: 14px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    #content .btn-lock {
+        font-size: 14px;
+    }
+
+    #content .manage-web .root-manage {
+        padding: 40px 8px 20px;
+    }
+
+    #content .revenue-shop {
+        padding: 0 20px 40px;
+    }
+
+    #content .bill .bill-mini th,
+    #content .bill .bill-mini td {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    /* ô thêm sản phẩm */
+
+    #add-category {
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        background-image: var(--color);
+        color: #fff;
+        font-weight: 550;
+    }
+
+    #add-product {
+        font-size: 16px;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        background-image: var(--color);
+        color: #fff;
+        font-weight: 550;
+    }
+
+    #list-product .add-category {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    #list-product .table-input-category {
+        display: none;
+        text-align: right;
+        width: 100%;
+        padding: 20px;
+        background-image: linear-gradient(to right, #fa9e1b, #8d4fff);
+        min-height: 100px;
+        border-radius: 5px;
+        padding-left: 5%;
+    }
+
+    #list-product .table-input-category.active {
+        display: block;
+    }
+
+    #list-product .table-input-category .input-category {
+        font-size: 16px;
+        text-align: left;
+        display: block;
+        margin: 8px 0;
+    }
+
+    #list-product .input-category .input-label {
+        display: block;
+        font-size: 16px;
+        color: #666;
+    }
+
+    #list-product .input-category .category-input {
+        font-size: 16px;
+        padding: 4px 60px 8px 5px;
+        margin-left: 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: 2px solid #ccc;
+    }
+
+    #create-category {
+        font-size: 16px;
+        padding: 5px 20px;
+        border-radius: 10px;
+        margin-top: 10px;
+        border: 1px solid #999;
+        color: #333;
+        background-image: linear-gradient(to right, #d4ffff, #fa9e1b);
+    }
+
+    /* bảng product */
+
+    #list-content-product .add-product {
+        display: block;
+    }
+
+    #list-content-product .table-input-product {
+        display: none;
+        text-align: right;
+        width: 100%;
+        padding: 20px;
+        background-image: linear-gradient(to right, #fa9e1b, #8d4fff);
+        min-height: 100px;
+        border-radius: 5px;
+        padding-left: 5%;
+    }
+
+    #list-content-product .table-input-product.active {
+        display: block;
+    }
+
+    #list-content-product .table-input-product .input-product {
+        font-size: 16px;
+        text-align: left;
+        display: block;
+        margin: 8px 0;
+    }
+
+    #list-content-product .input-product .input-label {
+        font-size: 16px;
+        display: block;
+        font-size: 16px;
+        color: #666;
+    }
+
+    #list-content-product .input-product .product-input {
+        font-size: 16px;
+        padding: 4px 60px 8px 5px;
+        margin-left: 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: 2px solid #ccc;
+    }
+
+    #create-product {
+        padding: 5px 20px;
+        border-radius: 10px;
+        margin-top: 10px;
+        border: 1px solid #999;
+        color: #333;
+        background-image: linear-gradient(to right, #d4ffff, #fa9e1b);
+    }
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+table,
+th,
+td {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#list-content-product .content-products {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#list-content-product .product .item-product {
+    position: relative;
+}
+
+#list-content-product .product .close-product {
+    font-size: 10px;
+    z-index: 99;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2px 4px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    color: #000;
+    border-top-right-radius: 5px;
+}
+
+/* css thanh menu admin */
+#menu .menu-admin {
+    position: relative;
+}
+
+.menu-admin .list-menu {
+    opacity: 0;
+    display: none;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 10px;
+    border-radius: 10px;
+    position: absolute;
+    background-color: #F4C2C2;
+    left: -100%;
+    top: 100px;
+    width: 200px;
+}
+
+/* 
+.menu-admin:hover .list-menu {
+    display: block;
+    opacity: 1;
+} */
+.list-menu.active {
+    opacity: 1;
+    display: block;
+    transition: 10s;
+}
+
+.menu-admin .list-menu span {
+    display: inline-block;
+    position: absolute;
+    line-height: 0;
+    left: 35%;
+    top: -20px;
+}
+
+#menu .list-menu span i {
+    font-size: 30px;
+    color: #F4C2C2;
+    border: none;
+}
+
+.menu-admin .list-menu ul {
+    position: relative;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+#menu .menu-admin a i {
+    transition: 0.5s;
+    border: none;
+}
+
+#menu .menu-admin .rote-180 {
+    transform: rotate(-180deg)
+}
+
+#menu .menu-admin .list-menu li {
+    font-size: 14px;
+    line-height: 40px;
+    border-bottom: #666;
+}
+
+#menu .menu-admin .list-menu a {
+    color: #fff;
+    font-size: 14px;
+    opacity: 1;
+    display: block;
+    border-left: none;
+    border-top: 1px solid #E8E1E6;
+}
+
+#menu .menu-admin .list-menu li:first-child a {
+    border-top: none;
+}

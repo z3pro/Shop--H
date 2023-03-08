@@ -1,0 +1,21 @@
+#menu .card-user {
+    color: #FFE4E1;
+    margin-left: 8px;
+}
+#menu .card-user .icon-card {
+    position: relative;
+}
+#menu .card-user:hover{
+    opacity: 0.7;
+}
+#menu .card-user .span-card {
+    position: absolute;
+    top: -10px;
+    right: -12px;
+    padding: 3px 6px;
+    color: red;
+    background-color:  #FFE4E1;
+    border-radius: 8px;
+    font-size: 8px;
+    border: 2px solid #EE82EE;
+}

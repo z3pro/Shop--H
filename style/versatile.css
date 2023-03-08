@@ -1,0 +1,508 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+table,
+th,
+td {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#root {
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(to right, #F4BFD4, #FFC0CB);
+    ;
+}
+
+#root .card-root {
+    display: flex;
+    flex-direction: column;
+}
+@media (max-width:567px) {
+    th,
+    td {
+        padding: 6px;
+    }
+
+    #root .card-root .title-root {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        font-size: 20px;
+        margin: 20px;
+        color: #fff;
+        font-weight: 600;
+    }
+
+    #root .title-root {
+        display: flex;
+        justify-content: center;
+    }
+
+    #root .title-shop {
+        padding-right: 20px;
+        padding-left: 10px;
+        margin-right: 20px;
+        border-right: 3px solid #fff;
+    }
+
+    #root .title-product {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+    #root .info-user {
+        background-color: #fff;
+        line-height: 20px;
+        padding: 10px 20px;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+    }
+
+    #root .info-user .address-user {
+        display: flex;
+
+    }
+
+    #root .address-user .name-phone {
+        margin-right: 10px;
+    }
+
+    #root .address-user .info-change {
+        border: none;
+        background-color: #fff;
+        color: blue;
+        margin-left: 10px;
+    }
+
+    #root .list-products {
+        font-size: 10px;
+        margin: 0 10px;
+    }
+
+    #root .list-products table {
+        width: 100%;
+        background-color: #fff;
+    }
+
+    #root .product-content {
+        display: flex;
+        justify-content: center;
+    }
+
+    #root .product-content .img-product img {
+        margin-right: 10px;
+        width: 20px;
+        height: 20px;
+    }
+
+    #root .price-product {
+        text-align: center;
+        color: red;
+    }
+
+    #root .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #root .quantity-product {
+        border: 1px solid #ccc;
+        display: flex;
+        width: 50px;
+        height: 20px;
+    }
+
+    #root .quantity-product input {
+        font-size: 10px;
+        width: 20px;
+        text-align: center;
+        height: 20px;
+        border: 1px solid #ccc;
+    }
+
+    #root .btn-center {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 8px;
+    }
+
+    #root .btn-center:hover {
+        opacity: 0.7;
+    }
+
+    #root .into-money {
+        color: red;
+    }
+
+    #root .buy-product {
+        font-size: 12px;
+        display: flex;
+        justify-content: right;
+        background-color: #fff;
+        height: 50px;
+        align-items: center;
+        padding: 0 10px;
+        margin: 10px 10px;
+    }
+
+    #root .buy-product .buy-money {
+        margin-right: 10px;
+        font-size: 12px;
+        font-weight: 550;
+    }
+
+    #root .buy-product .buy-money span {
+        color: red;
+        font-weight: 500;
+    }
+
+    #root .buy-product .btn-buy {
+        border: none;
+        background-color: #F4BFD4;
+        margin-left: 10px;
+        padding: 6px;
+        color: #fff;
+        font-size: 12px;
+    }
+
+    #root .buy-product .btn-buy:hover {
+        opacity: 0.7;
+    }
+}
+@media(min-width: 768.1px) and (max-width: 767.8px) {
+    th,
+    td {
+        padding: 6px;
+    }
+
+    #root .card-root .title-root {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        font-size: 20px;
+        margin: 20px;
+        color: #fff;
+        font-weight: 600;
+    }
+
+    #root .title-root {
+        display: flex;
+        justify-content: center;
+    }
+
+    #root .title-shop {
+        padding-right: 20px;
+        padding-left: 10px;
+        margin-right: 20px;
+        border-right: 3px solid #fff;
+    }
+
+    #root .title-product {
+        width: 200px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+    #root .info-user {
+        background-color: #fff;
+        line-height: 20px;
+        padding: 10px 20px;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+    }
+
+    #root .info-user .address-user {
+        display: flex;
+
+    }
+
+    #root .address-user .name-phone {
+        margin-right: 10px;
+    }
+
+    #root .address-user .info-change {
+        border: none;
+        background-color: #fff;
+        color: blue;
+        margin-left: 10px;
+    }
+
+    #root .list-products {
+        font-size: 10px;
+        margin: 0 10px;
+    }
+
+    #root .list-products table {
+        width: 100%;
+        background-color: #fff;
+    }
+
+    #root .product-content {
+        display: flex;
+        justify-content: center;
+    }
+
+    #root .product-content .img-product img {
+        margin-right: 10px;
+        width: 20px;
+        height: 20px;
+    }
+
+    #root .price-product {
+        text-align: center;
+        color: red;
+    }
+
+    #root .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #root .quantity-product {
+        border: 1px solid #ccc;
+        display: flex;
+        width: 80px;
+        height: 20px;
+    }
+
+    #root .quantity-product input {
+        font-size: 10px;
+        width: 30px;
+        text-align: center;
+        height: 20px;
+        border: 1px solid #ccc;
+    }
+
+    #root .btn-center {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+    }
+
+    #root .btn-center:hover {
+        opacity: 0.7;
+    }
+
+    #root .into-money {
+        color: red;
+    }
+
+    #root .buy-product {
+        display: flex;
+        justify-content: right;
+        background-color: #fff;
+        height: 80px;
+        align-items: center;
+        padding: 0 30px;
+        margin: 30px 10px;
+    }
+
+    #root .buy-product .buy-money {
+        margin-right: 10px;
+        font-size: 16px;
+        font-weight: 550;
+    }
+
+    #root .buy-product .buy-money span {
+        color: red;
+        font-weight: 500;
+    }
+
+    #root .buy-product .btn-buy {
+        border: none;
+        background-color: #F4BFD4;
+        margin-left: 10px;
+        padding: 10px;
+        color: #fff;
+        font-size: 16px;
+    }
+
+    #root .buy-product .btn-buy:hover {
+        opacity: 0.7;
+    }
+}
+
+@media(min-width: 768px) {
+
+    th,
+    td {
+        padding: 10px;
+    }
+
+    #root .card-root .title-root {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        font-size: 30px;
+        margin: 30px;
+        color: #fff;
+        font-weight: 600;
+    }
+
+    #root .title-root {
+        display: flex;
+        justify-content: center;
+    }
+
+    #root .title-shop {
+        padding-right: 20px;
+        padding-left: 10px;
+        margin-right: 20px;
+        border-right: 3px solid #fff;
+    }
+
+    #root .title-product {
+        width: 300px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+    #root .info-user {
+        background-color: #fff;
+        line-height: 30px;
+        padding: 10px 20px;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #root .info-user .address-user {
+        display: flex;
+
+    }
+
+    #root .address-user .name-phone {
+        margin-right: 10px;
+    }
+
+    #root .address-user .info-change {
+        border: none;
+        background-color: #fff;
+        color: blue;
+        margin-left: 10px;
+    }
+
+    #root .list-products {
+        margin: 0 10px;
+    }
+
+    #root .list-products table {
+        width: 100%;
+        background-color: #fff;
+    }
+
+    #root .product-content {
+        display: flex;
+        justify-content: center;
+    }
+
+    #root .product-content .img-product img {
+        margin-right: 10px;
+        width: 50px;
+        height: 50px;
+    }
+
+    #root .price-product {
+        text-align: center;
+        color: red;
+    }
+
+    #root .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #root .quantity-product {
+        border: 1px solid #ccc;
+        display: flex;
+        width: 120px;
+        height: 30px;
+    }
+
+    #root .quantity-product input {
+        width: 50px;
+        text-align: center;
+        height: 30px;
+        border: 1px solid #ccc;
+    }
+
+    #root .btn-center {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+    }
+
+    #root .btn-center:hover {
+        opacity: 0.7;
+    }
+
+    #root .into-money {
+        color: red;
+    }
+
+    #root .buy-product {
+        display: flex;
+        justify-content: right;
+        background-color: #fff;
+        height: 80px;
+        align-items: center;
+        padding: 0 30px;
+        margin: 30px 10px;
+    }
+
+    #root .buy-product .buy-money {
+        margin-right: 10px;
+        font-size: 16px;
+        font-weight: 550;
+    }
+
+    #root .buy-product .buy-money span {
+        color: red;
+        font-weight: 500;
+    }
+
+    #root .buy-product .btn-buy {
+        border: none;
+        background-color: #F4BFD4;
+        margin-left: 10px;
+        padding: 10px;
+        color: #fff;
+        font-size: 16px;
+    }
+
+    #root .buy-product .btn-buy:hover {
+        opacity: 0.7;
+    }
+}

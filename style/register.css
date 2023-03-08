@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+}
+
+#login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100%;
+    background-image: linear-gradient(to right, #F4BFD4, #FFC0CB);
+}
+
+#login .form-login {
+    width: 90%;
+    min-height: 200px;
+    background-color: #fff;
+    text-align: center;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#login .form-group {
+    font-size: 14px;
+    text-align: left;
+}
+
+#login .name-login {
+    font-size: 16px;
+    padding: 5px 0;
+}
+
+#login .form-label {
+    display: block;
+    padding: 6px 0;
+}
+
+#login .form-input {
+    font-size: 12px;
+    width: 100%;
+    padding: 5px;
+}
+
+.form-input.active {
+    border: 2px solid #FF4500;
+}
+
+#login .form-group .span-form {
+    width: 100%;
+    display: block;
+    color: #FF4500;
+    margin-top: 5px;
+    font-size: 10px;
+}
+
+#btn-form {
+    width: 100%;
+    margin: 10px 0 20px;
+    padding: 5px 0;
+    border-radius: 10px;
+    font-size: 14px;
+    background-color: #FFC0CB;
+    color: #666;
+    border: 1px solid #ccc;
+}
+
+#btn-form:hover {
+    opacity: 0.7;
+}
+
+#login .register {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+/* responsive */
+@media (min-width:576px) {
+    #login .form-login {
+        padding: 20px;
+        width: 80%;
+    }
+    #login .name-login {
+        font-size: 28px;
+        padding: 10px 0;
+    }
+    #login .form-group {
+        text-align: left;
+        font-size: 16px;
+    }
+    #login .form-input {
+        font-size: 14px;
+    }
+    #btn-form {
+        width: 100%;
+        margin: 10px 0;
+        padding: 10px 0;
+        border-radius: 6px;
+        font-size: 18px;
+        background-color: #FFC0CB;
+        color: #666;
+        border: 1px solid #ccc;
+    }
+    #login .form-group .span-form {
+        font-size: 14px;
+    }
+    #login .register {
+        font-size: 16px;
+        margin: 8px 0;
+    }
+}
+@media (min-width: 768px) {
+    #login .form-login {
+        width: 80%;
+    }
+}
+@media (min-width: 992px) {
+    #login .form-login {
+        width: 50%;
+    }
+}
