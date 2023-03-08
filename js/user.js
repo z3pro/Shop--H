@@ -4,12 +4,13 @@ import { getDb } from "./firebase.js"
 
 //xử lý bảo mật 1 chút
 window.onload = () => {
-    const info = JSON.parse(sessionStorage.getItem('infoUser'));
-    $('#admin-dh').innerText = info.name;
-    console.log(info);
+    let info = sessionStorage.getItem('infoUser');
+    
     if (!info) {
         window.location = '../html/login.html'
     }
+    info = JSON.parse(info);
+    $('#admin-dh').innerText = info.name;
     if (info.name && info.password && !info.admin) {
         console.log('User');
     } else {
