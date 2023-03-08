@@ -3,8 +3,7 @@ const $$ = document.querySelectorAll.bind(document);
 import { create, removeVietnameseTones } from "./firebase.js";
 //hàm kiểm tra khi mới truy cập vào trang
 window.onload = ()=>{
-    const infoUser = JSON.parse(sessionStorage.getItem('infoUser'));
-    console.log(infoUser);
+    const infoUser = sessionStorage.getItem('infoUser');
     if(!infoUser) {
         window.location = '../html/login.html';
     }
