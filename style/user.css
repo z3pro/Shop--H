@@ -1,6 +1,9 @@
 #menu .card-user {
     color: #FFE4E1;
     margin-left: 8px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 #menu .card-user .icon-card {
     position: relative;
